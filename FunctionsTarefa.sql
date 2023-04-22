@@ -33,6 +33,7 @@ $$ language 'plpgsql'
 
 
 Lista 4
+
 --2
 
 create function inserirEmpregado(cpf numeric(14), nome varchar(40), data_nasc date, sexo char, endereco varchar(100),salario numeric(12, 2), numr_dept numeric(5), cpf_super numeric(14))
@@ -71,3 +72,19 @@ begin
 	
 end;
 $$ language 'plpgsql';
+
+
+--7
+CREATE FUNCTION orcamento_folha_pagamento() 
+RETURNS TABLE(departamento_nome VARCHAR(40), orcamento_folha NUMERIC(12,2)) AS
+$$
+BEGIN
+    RETURN QUERY 
+    SELECT d.nome AS departamento_nome, SUM(e.salario) AS orcamento_folha
+    FROM empregado e
+    JOIN departamento d ON e.numr_dept = codigo
+    GROUP BY d.nome, d.orcamento;
+END;
+$$
+LANGUAGE PLPGSQL;
+
