@@ -86,5 +86,5 @@ BEGIN
     GROUP BY d.nome, d.orcamento;
 END;
 $$
-LANGUAGE PLPGSQL;
+LANGUAGE 'plpgsql';
 
