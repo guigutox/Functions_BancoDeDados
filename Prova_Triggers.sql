@@ -203,3 +203,35 @@ execute procedure funcao(argumentos);
 -- Para cancelar a operação return null
 
 --After o tipo retornado é ignorado então deve ser null
+
+--DATES e SUAS FUNÇÔES
+--TIMESTAMP = Armazenar datas e horas espeficicas = 02-12-2002 09:00:00
+--Interval = Armazenar um periodo de tempo ou sua duração = 34 anos, 2 horas 30 minutos.
+
+--Age(timestamp, timestamp) = retorna a diferença de tempo de um para o outro, interval
+
+--Age(timestamp) = retorna a diferença de tempo da data atual em relação a data passada, interval
+
+--Current_date = retorna a data atual, date
+
+--Current_time = hora atual, formato de hora
+
+--Current_timestamp  = data e hora, time stamp
+
+-- date_part(text, timestamp) = retorna parte selecionada da hora ex: date_parte('hour', timestamp'2001-02-16 20:38:40') = retornara 20 que é a hora
+
+--date_part(text, interval) = retorna a parte selecionada porem agora de um timestamp.
+
+--date_trunc() arredonda para baixo
+
+--extarct(campo from timestamp) = retornara em integer a parte selecionada: extract(day from '2002-12-02') retornara 02
+
+--extract(campo from interval) = retorna em integer a parte selecionada ex: extract(month from '2 years 3 months') = retornara 16
+
+-- localtime // localtimestamp retonara hora local ou data e hora local
+
+-- isinfinite = testa se é um intervalo finito e se for finiito devolve true
+
+-- now() = data e hora correte
+
+-- timeofday() = data e hora atual
