@@ -235,3 +235,9 @@ execute procedure funcao(argumentos);
 -- now() = data e hora correte
 
 -- timeofday() = data e hora atual
+
+-- ALTER TABLE nome_da_tabela ADD COLUMN nome_da_coluna tipo_de_dados;
+
+-- ALTER TABLE nome_da_tabela DROP COLUMN nome_da_coluna;
+
+-- ALTER TABLE nome_da_tabela ALTER COLUMN nome_da_coluna TYPE novo_tipo_de_dados;
